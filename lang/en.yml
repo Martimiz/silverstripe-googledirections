@@ -1,0 +1,7 @@
+en:
+  GOOGLEDIRECTIONS:
+    DESTINATION: 'Destination'     
+    DIRECTIONS: 'Directions'
+    ORIGIN: 'Point of origin'
+    PRINT: 'Print'        
+    SHOWDIRECTIONS: 'Show directions'

@@ -1,0 +1,7 @@
+nl:
+  GOOGLEDIRECTIONS:
+    DESTINATION: 'Bestemming'     
+    DIRECTIONS: 'Routebeschrijving'
+    ORIGIN: 'Vertrekpunt'
+    PRINT: 'Afdrukken'        
+    SHOWDIRECTIONS: 'Toon route'
