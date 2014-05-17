@@ -2,8 +2,8 @@
 
 ## Introduction ##
 
-This module lets you create links that generate a Google Map based on 
-either a geolocation (as in "52.123456, 4.123456") or a valid address. 
+This module lets you create links that dynamically generate a Google Map based  
+on either a geolocation (as in "52.123456, 4.123456") or a valid address. 
 There can be multiple links on a page, but one map will be created, that 
 is regenerated on clicking a different link. 
 
