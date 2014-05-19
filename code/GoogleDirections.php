@@ -16,27 +16,6 @@ class GoogleDirections extends DataExtension {
 
 		Requirements::css(GOOGLEDIRECTIONS_BASE . '/css/googledirections.css');
 		
-		Requirements::customScript(<<<JS
-
-$(document).ready(function() {	
-			
-	locations = {
-		Alkmaar: {
-			infoText: '<p><strong>Locatie: Alkmaar</strong><br>Laat 38<br>Telefoon: 1234567890</p>',
-			latlng: '',
-			address: 'Laat 28 Alkmaar'
-		},	
-		Haarlem: {
-			infoText: '<p><strong>Locatie: Haarlem</strong><br>Kennemerstraat 22<br>Telefoon: 1234567890</p>',
-			latlng: '',
-			address: ' Grote Markt 2'
-		}	
-	}
-			
-});	
-			
-JS
-		);
 	}
 	
 	public function getGoogleDirections() {
