@@ -2,8 +2,8 @@
 
 ## Introduction ##
 
-This module lets you create links that dynamically generate a Google Map based  
-on either a geolocation (as in "52.123456, 4.123456") or a valid address. 
+This module lets you create links that generate a Google Map based on 
+either a geolocation (as in "52.123456, 4.123456") or a valid address. 
 There can be multiple links on a page, but one map will be created, that 
 is regenerated on clicking a different link. 
 
@@ -82,8 +82,19 @@ language files here:
  * For PHP: /lang/
  * For JavaScript: /javascript/lang/
 
-**Note:** The default text in the inputfield for the point of origin needs to be 
+## Issues ##
+
+**1. the default text in the point-of-origin input doesn't disappear on entering 
+the field** 
+
+The default text in the inputfield for the point of origin needs to be 
 equal in both language files for it to work. *(Need to find another way for this)* 
+
+If the right JavaScript locale isn't picked up, this can be fixed 
+by adding the locale to the body tag like this:
+
+	<body lang="$ContentLocale">
+
 
 ## Maintainers ##
 
