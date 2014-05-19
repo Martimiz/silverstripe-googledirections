@@ -59,6 +59,8 @@ var scrollToMap = false;
 		var geocoder = new google.maps.Geocoder();
 		var initialValue = ss.i18n._t('GOOGLEDIRECTIONS.ORIGIN');
 		var infoText = '';
+		var latlngString;
+		var address;
 		
 		/*
 		 * Generate the map for the currently clicked link
@@ -169,8 +171,8 @@ var scrollToMap = false;
 		$('.googleDirections').on('click', function(event) { 	
 			
 			// always reset to accomodate a new link
-			var latlngString = '';
-			var address = '';
+			latlngString = '';
+			address = '';
 			var lat = 0,lng = 0;
 			
 			event.preventDefault();
@@ -226,6 +228,7 @@ var scrollToMap = false;
 						lat = results[0].geometry.location.lat();
 						lng = results[0].geometry.location.lng();
 						latlng = new google.maps.LatLng(lat,lng);
+						latlngString = lat + ',' + lng;
 						initialize();
 					} 
 					else {
