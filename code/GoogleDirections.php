@@ -13,8 +13,8 @@ class GoogleDirections extends DataExtension {
 		Requirements::javascript(FRAMEWORK_DIR . '/thirdparty/jquery/jquery.js');
 		Requirements::add_i18n_javascript(GOOGLEDIRECTIONS_BASE . '/javascript/lang');
 		Requirements::javascript(GOOGLEDIRECTIONS_BASE . '/javascript/googledirections.js');
-		
-		//Requirements::javascript(GOOGLEDIRECTIONS_BASE . '/javascript/plugin.js');
+
+		Requirements::css(GOOGLEDIRECTIONS_BASE . '/css/googledirections.css');
 		
 		Requirements::customScript(<<<JS
 

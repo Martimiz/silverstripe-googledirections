@@ -1,0 +1,32 @@
+/*
+ *  Module: silverstripe-googledirections
+ */
+
+#MapHolder {
+	width:100%;
+	display: none;
+}
+
+#MapHolder #MapCanvas {
+	height: 400px;
+	width: 100%;
+}
+
+#MapHolder .field {
+	float: left;
+}
+
+#MapHolder form .field input.text {
+	height: 30px;
+}
+
+#MapHolder form .Actions input.action {
+	height: 30px;
+}
+
+/* Note: fixes problem with zoomtool object size 
+ *       probable reason: img max-width defined elsewhere 
+ */
+#MapCanvas img { 
+	max-width: none !important;
+}
