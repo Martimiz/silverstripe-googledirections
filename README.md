@@ -47,11 +47,11 @@ There are two ways to set up the links:
  
 ### 1. use metadata in the link itself ###
 
-	<a id="Link1" class="googleDirections" href="#" data-latlng="52.123456, 4.123456">My link</a>
+	<a id="Link1" class="googleDirections" href="#route" data-latlng="52.123456, 4.123456">My link</a>
 
 or
 	
-	<a id="Link2" class="googleDirections" href="#" title="Street 123 city">My link</a>
+	<a id="Link2" class="googleDirections" href="#route" title="Street 123 city">My link</a>
 
 If data-latlng is not found, the module will look for a valid address in the title attribute.
 
