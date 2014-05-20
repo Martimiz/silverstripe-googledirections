@@ -48,7 +48,7 @@
  * 
  */
 var locations = {};
-var scrollToMap = false;
+var scrollToMap = true;
 
 (function($) {
 	$(document).ready(function() {
@@ -66,10 +66,10 @@ var scrollToMap = false;
 		 * Generate the map for the currently clicked link
 		 */
 		function initialize() {
-			
+				
 			var myOptions = {
 				zoom: 14,
-				draggable:true,
+				draggable:false,
 				scrollwheel:false,
 				center: latlng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -97,7 +97,6 @@ var scrollToMap = false;
 			directionsDisplay.setMap(map);
 			directionsDisplay.setPanel(document.getElementById("DirectionsPanel"));		
 			
-			$('#MapHolder').stop().animate({height: "show"});
 		}
 
 		/* 
@@ -105,11 +104,14 @@ var scrollToMap = false;
 		 * list of Google-generated directions
 		 */
 		function calculateRoute() {
+
 			var origin = document.getElementById("RouteStart").value;
+
+			var destination = (address)? address : latlngString;
 
 			var request = {
 				origin:origin,
-				destination:latlngString,
+				destination: destination,
 				travelMode: google.maps.DirectionsTravelMode.DRIVING
 			};
 			
@@ -184,6 +186,9 @@ var scrollToMap = false;
 			if ('scrollToMap' in locations) scrollToRoute = locations.scrollToMap;
 			if (scrollToMap) $('html,body').animate({scrollTop:$(event.target.hash).offset().top}, 100);
 
+			$('#MapHolder').stop().animate({height: "show"});
+			//$('#MapHolder').show();
+
 			// get location details (infoText, latlng and/or address from the location 
 			// object - if it exists
 			var id = $(this).attr('id');
@@ -209,7 +214,7 @@ var scrollToMap = false;
 				// <a title="Damrak Amsterdam" ... >
 				// need to initialize from the function because of timing or context(?) issues
 				else if ($(this).attr('title')) {
-					var address = $(this).attr('title');
+					address = $(this).attr('title');
 				}
 			}
 			
