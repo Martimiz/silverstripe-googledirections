@@ -1,3 +1,5 @@
 Page:
   extensions:
     - GoogleDirections
+GoogleDirections:
+  use_browser_language: false 

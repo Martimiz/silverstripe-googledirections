@@ -74,13 +74,23 @@ the marker's  information window:
 	
 *(Note that Link1 and Link2 are the link's id attributes.)*	
 
-## Localization or i18n ##
+## Localization and i18n ##
 
 The PHP code as well as the JavaScript in this module is localized. Find the 
 language files here:
 
  * For PHP: /lang/
  * For JavaScript: /javascript/lang/
+
+## Directions language ##
+
+By default the module will use the current SilverStripe locale to display 
+directions, which is useful on multilingual sites. To revert to the current 
+browser locale instead (Google default), add the following to your GoogleDirections.yml:
+
+	GoogleDirections:
+	  use_browser_language: true 
+
 
 ## Issues ##
 
