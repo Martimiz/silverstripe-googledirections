@@ -1,5 +1,5 @@
 {
-	"name": "martimiz/silverstripe-googleDirections",
+	"name": "martimiz/silverstripe-googledirections",
 	"description": "Create a Google map and enable Google Directions for multiple links on a page, fully localized",
 	"type": "silverstripe-module",
 	"keywords": ["silverstripe", "GoogleMap", "cms", "Google", "DirectionsService", "map", "directions", "route", "location"],
