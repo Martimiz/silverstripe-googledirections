@@ -1,9 +1,9 @@
 {
 	"name": "martimiz/silverstripe-googleDirections",
-	"description": "Create a Google map and enable Google Directions for multiple links on a page",
+	"description": "Create a Google map and enable Google Directions for multiple links on a page, fully localized",
 	"type": "silverstripe-module",
-	"keywords": ["silverstripe", "GoogleMap", "cms", "GoogleDirections", "map", "directions", "location"],
-	"homepage": "https://github.com/Martimiz/silverstripe-googleDirections",
+	"keywords": ["silverstripe", "GoogleMap", "cms", "Google", "DirectionsService", "map", "directions", "route", "location"],
+	"homepage": "https://github.com/Martimiz/silverstripe-googledirections",
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
@@ -13,13 +13,12 @@
 	],
 	"require":
 	{
-		"php": ">=5.3.2",
-		"silverstripe/framework": ">=3.1",
-		"silverstripe/cms": ">=3.1",
+		"silverstripe/framework": "~3.1",
+		"silverstripe/cms": "~3.1",
 		"silverstripe/translatable": "dev-master"
 	},
 	"support": 
 	{
-		"issues": "https://github.com/Martimiz/silverstripe-googleDirections/issues?state=open"
+		"issues": "https://github.com/Martimiz/silverstripe-googledirections/issues"
 	}	
 }
