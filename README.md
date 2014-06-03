@@ -91,6 +91,14 @@ browser locale instead (Google default), add the following to your GoogleDirecti
 	GoogleDirections:
 	  use_browser_language: true 
 
+**Note:** When using this module with the Translatable module, you may need 
+to add this to your Page_Controller for the translations to work properly: 
+
+	public function init() {
+	
+		i18n::set_locale($this->Locale);
+		...
+	}
 
 ## Issues ##
 
