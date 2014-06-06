@@ -1,5 +1,5 @@
 en:
-  GOOGLEDIRECTIONS:
+  GoogleDirections:
     DESTINATION: 'Destination'     
     DIRECTIONS: 'Directions'
     ORIGIN: 'Point of origin'

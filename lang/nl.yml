@@ -1,5 +1,5 @@
 nl:
-  GOOGLEDIRECTIONS:
+  GoogleDirections:
     DESTINATION: 'Bestemming'     
     DIRECTIONS: 'Routebeschrijving'
     ORIGIN: 'Vertrekpunt'

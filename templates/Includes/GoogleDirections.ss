@@ -2,15 +2,15 @@
 <div id="MapHolder">
 
 	<div id="RouteForm">
-		<h3><% _t('GOOGLEDIRECTIONS.DIRECTIONS','Route description') %></h3>
+		<h3><% _t('GoogleDirections.DIRECTIONS','Route description') %></h3>
 		<form action="$Link" method="POST">
 			<fieldset>
 				<div class="field">
-					<input class="text small" type="text" id="RouteStart" value="<% _t('GOOGLEDIRECTIONS.ORIGIN') %>">
+					<input class="text small" type="text" id="RouteStart" value="<% _t('GoogleDirections.ORIGIN') %>">
 				</div>
 				<div class="Actions">
-					<input id="SubmitOrigin" type="submit" value="<% _t('GOOGLEDIRECTIONS.SHOWDIRECTIONS','Show route') %>" class="action" />
-					<input id="PrintRoute" type="button" value="<% _t('GOOGLEDIRECTIONS.PRINT','Print route') %>" class="action" style="display:none;">
+					<input id="SubmitOrigin" type="submit" value="<% _t('GoogleDirections.SHOWDIRECTIONS','Show route') %>" class="action" />
+					<input id="PrintRoute" type="button" value="<% _t('GoogleDirections.PRINT','Print route') %>" class="action" style="display:none;">
 				</div>	
 			</fieldset>
 		</form>
