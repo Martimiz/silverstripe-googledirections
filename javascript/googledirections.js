@@ -11,14 +11,17 @@
  *  	locations.link1 = {
  *  		infoText: '<p><strong>My title</strong><br>My description</p>',
  *  		address: 'Street 123 City'
- *  		showOnStartup: true            // display this map initially on the page
  *  	};	
  *  	locations.link2 = {
  *  		infoText: '<p><strong>Locatie: Haarlem</strong><br>Kennemerstraat 22<br>Telefoon: 1234567890</p>',
- *  		latlng: '52.123456, 4.123456'
+ *  		latlng: '52.123456, 4.123456',
  *  		scrollToMap: true              // on long pages, smooth-scroll to the map
  *  	}			
  *  });	
+ *  
+ *  To define a link as a StartUpMap do :
+ *  
+ *	showStartupMap('link2');
  *  
  *  also let the user enter a point of origin from where to calulate te route.
  *  Uses the following template:
@@ -48,7 +51,7 @@
 var locations = {};
 var scrollToMap = true;
 var showOnStartup = false;
-var showInitialMap;
+var startupMapFound = false;
 
 
 var latlng;
@@ -217,10 +220,17 @@ function displayMap(location) {
  * Check if a location has showInitialMap defined. Note: the location doesn't 
  * necessary be named after an existing link!
  */
-function showInitialMap() {
-	for (var location in locations) {
-		if ('showOnStartup' in locations[location] && locations[location].showOnStartup) {
-			displayMap(locations[location]);
+function showStartupMap(mapID) {
+	//$('#Haarlem')[0].click();
+
+	if (!startupMapFound && mapID) {
+		if (mapID in locations) {
+			startupMapFound = true;
+			displayMap(locations[mapID]);
+		}
+		
+		else if($('#' + mapID).length){
+			$('#' + mapID)[0].click();
 		}
 	}
 }

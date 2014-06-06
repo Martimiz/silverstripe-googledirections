@@ -62,10 +62,9 @@ class GoogleDirections extends DataExtension {
 						locations.defaultMap = {
 							infoText: '{$infoText}',
 							address: '{$address}',
-							latlng: '{$latlng}',
-							showOnStartup: true
+							latlng: '{$latlng}'
 						};
-						showInitialMap();
+						showStartupMap('defaultMap');
 					});
 				}(jQuery));
 JS
