@@ -1,7 +1,12 @@
 nl:
   GoogleDirections:
+    ADDRESS: 'Adres'      
     DESTINATION: 'Bestemming'     
     DIRECTIONS: 'Routebeschrijving'
+    GOOGLEDIRECTIONSTAB: 'Map'
+    INFOTEXT: 'Info'
+    LATLNG: 'latlng'
     ORIGIN: 'Vertrekpunt'
     PRINT: 'Afdrukken'        
     SHOWDIRECTIONS: 'Toon route'
+

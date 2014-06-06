@@ -1,7 +1,11 @@
 en:
   GoogleDirections:
+    ADDRESS: 'Address'      
     DESTINATION: 'Destination'     
     DIRECTIONS: 'Directions'
+    GOOGLEDIRECTIONSTAB: 'Map'
+    INFOTEXT: 'Info'
+    LATLNG: 'latlng'
     ORIGIN: 'Point of origin'
     PRINT: 'Print'        
     SHOWDIRECTIONS: 'Show directions'
