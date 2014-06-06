@@ -22,6 +22,7 @@
 
 #MapHolder form .Actions input.action {
 	height: 30px;
+	margin-left: 24px;
 }
 
 /* Note: fixes problem with zoomtool object size 
