@@ -1,5 +1,9 @@
 # Google map and directions module for SilverStripe CMS #
 
+
+## NOTE: This branch is test-only, use the master branch instead! ###
+
+
 ## Introduction ##
 
 This module lets you create links that generate a Google Map based on 
