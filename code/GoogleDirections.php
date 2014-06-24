@@ -50,6 +50,29 @@ class GoogleDirections extends DataExtension {
 
 		Requirements::css(GOOGLEDIRECTIONS_BASE . '/css/googledirections.css');
 		
+		// Build a defaultmap if there is one defined
+		$startupMap = $this->owner->GoogleMaps()->filter(array('ShowOnStartup' => true))->first(); 
+		
+		if ($startupMap) {
+			$address = $startupMap->Address;
+			$latlng = $startupMap->LatLng;
+			$infoText = $startupMap->InfoText;
+			$infoText = str_replace("", "''", $infoText);
+
+			if ($address || $latlng) {
+				Requirements::customScript(<<<JS
+					(function($) {
+						$(document).ready(function() {
+							locations.defaultMap = {
+								infoText: '{$infoText}',
+								address: '{$address}',
+								latlng: '{$latlng}'
+							};
+							showStartupMap('defaultMap');
+						});
+					}(jQuery));
+JS
+				);
 	}
 	
 	/**
