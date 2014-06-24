@@ -10,6 +10,8 @@ class GoogleDirections extends DataExtension {
 	
 	private static $use_browser_language = false;
 	
+	private static $directions_enabled = true;
+	
 	public function contentcontrollerInit() {	
 
 		$useBrowserLanguage = Config::inst()->get('GoogleDirections', 'use_browser_language');
@@ -29,6 +31,16 @@ class GoogleDirections extends DataExtension {
 
 		Requirements::css(GOOGLEDIRECTIONS_BASE . '/css/googledirections.css');
 		
+	}
+	
+	/**
+	 * Global setting: Is the display of directions enabled for this website? 
+	 * Default: true. If false only the map is displayed
+	 * 
+	 * @return Boolean
+	 */
+	public function DirectionsEnabled() {
+		return Config::inst()->get('GoogleDirections', 'directions_enabled');
 	}
 	
 	public function getGoogleDirections() {

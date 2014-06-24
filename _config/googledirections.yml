@@ -3,3 +3,4 @@ Page:
     - GoogleDirections
 GoogleDirections:
   use_browser_language: false 
+  directions_enabled: true

@@ -1,6 +1,7 @@
 <a name="route" id="route"></a>
 <div id="MapHolder">
 
+	<% if DirectionsEnabled %>
 	<div id="RouteForm">
 		<h3><% _t('GoogleDirections.DIRECTIONS','Route description') %></h3>
 		<form action="$Link" method="POST">
@@ -15,6 +16,7 @@
 			</fieldset>
 		</form>
 	</div>
+	<% end_if %>
 	<div id="MapCanvas"></div>
 	<div id="DirectionsPanel"></div>
 </div>
