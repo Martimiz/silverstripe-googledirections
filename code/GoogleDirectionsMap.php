@@ -34,6 +34,12 @@ class GoogleDirectionsMap extends DataObject {
 		$fields = FieldList::create();
 		
 		$fields->push(
+		    HeaderField::create('Note', _t('GoogleDirectionsMap.HEADER', 'Create a Map...'), 2)
+		);						
+		$fields->push(	
+		    LiteralField::create('Note', _t('GoogleDirectionsMap.NOTE', '<strong>Note:</strong> lattitude and longitude take presedence over address'))
+		);
+		$fields->push(
 			TextField::create('LinkID', _t('GoogleDirectionsMap.LINKID', 'Title'))
 		);
 		$fields->push(

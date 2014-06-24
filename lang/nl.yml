@@ -10,9 +10,11 @@ nl:
     SINGULARNAME: Routekaart
   GoogleDirectionsMap:
     ADDRESS: Adres
+    HEADER: 'Routekaart aanmaken'
     INFOTEXT: 'Tekst bij klikken pointer'
     LATLNG: 'Latitude en longitude (komma gescheiden)'
     LINKID: Titel
+    NOTE: '<strong>Let op:</strong> lattitude en longitude gaan voor het adres'
     PAGE: Pagina
     PLURALNAME: Routekaarten
     SHOWONSTARTUP: 'Tonen wanneer de pagina wordt geopend'

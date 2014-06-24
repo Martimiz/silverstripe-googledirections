@@ -10,9 +10,11 @@ en:
     SINGULARNAME: Direction
   GoogleDirectionsMap:
     ADDRESS: Address
+    HEADER: 'Create a map...'
     INFOTEXT: 'Content for pointer onclick'
     LATLNG: 'Latitude and longitude (comma separated)'
     LINKID: Title
+    NOTE: '<strong>Note:</strong> lattitude and longitude take presedence over address'
     PAGE: Page
     PLURALNAME: Maps
     SHOWONSTARTUP: 'Show when page is opened'
