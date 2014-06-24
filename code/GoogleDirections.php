@@ -73,6 +73,8 @@ class GoogleDirections extends DataExtension {
 					}(jQuery));
 JS
 				);
+			}
+		}	
 	}
 	
 	/**
