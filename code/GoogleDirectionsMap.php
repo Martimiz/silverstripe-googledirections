@@ -30,22 +30,27 @@ class GoogleDirectionsMap extends DataObject {
 	private static $searchable_fields = array();
 	
 	public function getCMSFields() {
-		$fields = parent::getCMSFields();
 		
-		$fields->RemoveByName('PageID');
+		$fields = FieldList::create();
 		
 		$fields->push(
-			HiddenField::create('PageID', 'PageID')
+			TextField::create('LinkID', _t('GoogleDirectionsMap.LINKID', 'Title'))
 		);
-		
-		$fields->changeFieldOrder(array(
-		    'LinkID', 
-		    'LatLng', 
-		    'Address', 
-		    'ShowOnStartup',  
-		    'InfoText'
-		));
-		
+		$fields->push(
+			TextField::create('LatLng', _t('GoogleDirectionsMap.LATLNG', 'LatLng'))
+		);
+		$fields->push(
+			TextField::create('Address', _t('GoogleDirectionsMap.ADDRESS', 'Address'))
+		);	
+		$fields->push(
+			CheckboxField::create('ShowOnStartup', _t('GoogleDirectionsMap.SHOWONSTARTUP', 'Display on startup'))
+		);
+		$fields->push(
+			HtmlEditorField::create('InfoText',  _t('GoogleDirections.INFOTEXT', 'Info text'))->setRows(16)
+		);
+		$fields->push(
+			HiddenField::create('PageID', 'PageID')
+		);				
 		return $fields;
 	}
 	
