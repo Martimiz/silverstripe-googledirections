@@ -1,7 +1,19 @@
 nl:
   GoogleDirections:
-    DESTINATION: 'Bestemming'     
+    DESTINATION: 'Bestemming'
     DIRECTIONS: 'Routebeschrijving'
+    GOOGLEDIRECTIONSTAB: Routekaarten
     ORIGIN: 'Vertrekpunt'
-    PRINT: 'Afdrukken'        
+    PLURALNAME: Routekaarten
+    PRINT: 'Afdrukken'
     SHOWDIRECTIONS: 'Toon route'
+    SINGULARNAME: Routekaart
+  GoogleDirectionsMap:
+    ADDRESS: Adres
+    INFOTEXT: 'Tekst bij klikken pointer'
+    LATLNG: 'Latitude en longitude (komma gescheiden)'
+    LINKID: Titel
+    PAGE: Pagina
+    PLURALNAME: Routekaarten
+    SHOWONSTARTUP: 'Tonen wanneer de pagina wordt geopend'
+    SINGULARNAME: Routekaart

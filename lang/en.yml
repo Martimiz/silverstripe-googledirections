@@ -1,7 +1,19 @@
 en:
   GoogleDirections:
-    DESTINATION: 'Destination'     
+    DESTINATION: 'Destination'
     DIRECTIONS: 'Directions'
+    GOOGLEDIRECTIONSTAB: Maps
     ORIGIN: 'Point of origin'
-    PRINT: 'Print'        
+    PLURALNAME: Directions
+    PRINT: 'Print'
     SHOWDIRECTIONS: 'Show directions'
+    SINGULARNAME: Direction
+  GoogleDirectionsMap:
+    ADDRESS: Address
+    INFOTEXT: 'Content for pointer onclick'
+    LATLNG: 'Latitude and longitude (comma separated)'
+    LINKID: Title
+    PAGE: Page
+    PLURALNAME: Maps
+    SHOWONSTARTUP: 'Show when page is opened'
+    SINGULARNAME: Map

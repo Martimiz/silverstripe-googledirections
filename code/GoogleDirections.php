@@ -8,9 +8,28 @@
  */
 class GoogleDirections extends DataExtension {
 	
+	private static $has_many = array(
+	    'GoogleMaps' => 'GoogleDirectionsMap'
+	);
+	
 	private static $use_browser_language = false;
 	
 	private static $directions_enabled = true;
+	
+	public function updateCMSFields(FieldList $fields) {
+		$tab = _t('GoogleDirections.GOOGLEDIRECTIONSTAB', 'GoogleDirections');
+		
+		$fields->addFieldsToTab(
+			"Root.$tab",  
+			array(
+			    	$gridField = new GridField(
+					'GoogleMaps', 
+					'GoogleMaps', 
+					$this->owner->GoogleMaps(), 
+					GridFieldConfig_RecordEditor::create()
+				)			    
+		));
+	}	
 	
 	public function contentcontrollerInit() {	
 
