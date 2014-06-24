@@ -21,8 +21,11 @@
 }
 
 #MapHolder form .Actions input.action {
+	margin-left: 32px;
 	height: 30px;
 }
+
+#mapCanvas {}
 
 /* Note: fixes problem with zoomtool object size 
  *       probable reason: img max-width defined elsewhere 
