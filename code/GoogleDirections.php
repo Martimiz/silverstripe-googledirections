@@ -87,6 +87,33 @@ JS
 		return Config::inst()->get('GoogleDirections', 'directions_enabled');
 	}
 	
+	/**
+	 * Allow shortcodes like this: 
+	 * [GMap, link='My Link']
+	 * [GMap, link="My Link"]This is a link[/GMap]
+	 * 
+	 * Note: for this you need to register the handler in _config.php:
+	 * 
+	 * ShortcodeParser::get('default')->register('GMap', array('GoogleDirections', 'link_shortcode_handler'));
+	 * 
+	 * @return string - the link that will display the map 
+	 */
+	public static function link_shortcode_handler($arguments, $content='') {
+		if (!isset($arguments['link'])) return '';
+		
+		if (!($link = GoogleDirectionsMap::get()->filter(array('LinkID' => $arguments['link']))->first())) return '';
+		
+		$latLng = $link->LatLng;
+		$address = $link->Address;
+		if (!$latLng && !$address) return ''; 
+		
+		$location = ($latLng)? "data-latlng=\"$latLng\"" : "data-address=\"$address\"";
+		if($link->InfoText) $location .= 'data-infotext="' . Convert::raw2xml($link->InfoText) . '"';
+		if (!$content) $content = Convert::raw2xml($arguments['link']);		
+		
+		return "<a class=\"googleDirections\" $location href=\"#route\">$content</a>";
+	}
+	
 	public function getGoogleDirections() {
 		return $this->owner->renderWith('GoogleDirections');
 	}
