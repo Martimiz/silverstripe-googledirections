@@ -1,58 +1,36 @@
 /*
  *  Create a Google map for any link that has class="googleDirections" based either on
- *  geolocation in data-latlng, or an address in the title attribute
+ *  geolocation or an address. You can enter maps and generate links from within 
+ *  the CMS. If you wish you can also create links manually:
  *  
- *  <a id="link1" class="googleDirections" href="#" data-latlng="52.123456, 4.123456">My link</a>
- *  <a id="link2" class="googleDirections" href="#" title="Street 123 city">My link</a>
+ *  <a class="googleDirections" href="#route" data-latlng="52.123456, 4.123456">My link</a>
+ *  <a class="googleDirections" href="#route" data-address="Street 123 city" data-infotext="My infotext">My link</a>
  *  
- *  You can also use the following script:
+ *  You can also use script to define the data, if you want to leave out the data 
+ *  attributes in the link (you need to add an id to the link though: <a id="Link1" ....
  *  
- *  $(document).ready(function() {			
- *  	locations.link1 = {
- *  		infoText: '<p><strong>My title</strong><br>My description</p>',
- *  		address: 'Street 123 City'
- *  	};	
- *  	locations.link2 = {
- *  		infoText: '<p><strong>Locatie: Haarlem</strong><br>Kennemerstraat 22<br>Telefoon: 1234567890</p>',
- *  		latlng: '52.123456, 4.123456',
- *  		scrollToMap: true              // on long pages, smooth-scroll to the map
- *  	}			
- *  });	
+ *	$(document).ready(function() {	
+ *		locations.Link1 = {
+ *			infoText: '<p><strong>My Name</strong><br>My description</p>',
+ *			address: 'My Address'
+ *		};
+ *		// define this link as the default (startup) map
+ *		showStartupMap('Link1');
+ *	});
+ *
+ *  or 
  *  
- *  To define a link as a StartUpMap do :
- *  
- *	showStartupMap('link2');
- *  
- *  also let the user enter a point of origin from where to calulate te route.
- *  Uses the following template:
- *  
- *  <a name="route" id="route"></a>
- *  <div id="MapHolder" style="display:none;width:100%;">
- *  
- *  	<div id="RouteForm">
- *  		<h3><% _t('GOOGLEDIRECTIONS.DIRECTIONS','Route description') %></h3>
- *  		<form action="$Link" method="POST">
- *  			<fieldset>
- *  				<div class="field" style="float:left;">
- *  					<input style="padding: 4px 5px;" class="text small" type="text" id="RouteStart" value="<% _t('GOOGLEDIRECTIONS.ORIGIN') %>">
- *  				</div>
- *  				<div class="Actions">
- *  					<input id="SubmitOrigin" type="submit" value="Show route" class="action" />
- *  					<input id="PrintRoute" type="button" value="Print route" class="action" style="display:none;">
- *  				</div>	
- *  			</fieldset>
- *  		</form>
- *  	</div>
- *  	<div id="MapCanvas" style="width:1005;height:400px;border:2px solid red;"></div>
- *  	<div id="DirectionsPanel"></div>
- *  </div>  
- * 
+ *	$(document).ready(function() {	
+ *		locations.Link2 = {
+ *			infoText: '<p><strong>My Name</strong><br>My description</p>',
+ *			latLng: '52.111111, 4.111111'
+ *		};
+ *	});
  */
 var locations = {};
 var scrollToMap = true;
 var showOnStartup = false;
 var startupMapFound = false;
-
 
 var latlng;
 var directionDisplay;
@@ -62,7 +40,6 @@ var initialValue = ss.i18n._t('GOOGLEDIRECTIONS.ORIGIN');
 var infoText = '';
 var latlngString;
 var address;
-
 
 /*
  * Generate the map for the currently clicked link
