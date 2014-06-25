@@ -50,13 +50,15 @@ Or use anothe pagetype. Then add the following to the template at the location
 where your map should go:
 
 	$GoogleDirections
+
+Now do a `/dev/build/?flush=1`
 	
 If you want to use dynamic Shortcode links, in your _config.php set:
 
 	ShortcodeParser::get('default')
 	->register('GMap', array('GoogleDirections', 'link_shortcode_handler'));
 
-Now perform a mydomain/?flush=all
+Then perform a mydomain/?flush=all
 
 ## Creating maps ##
 
