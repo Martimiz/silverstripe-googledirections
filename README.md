@@ -15,7 +15,6 @@ The module is fully localized.
 ## Requirements ##
 
  * SilverStripe Framework 3.1+ and CMS 3.1+
- * SilverStripe Translatable module
 
 ## Installation
 
