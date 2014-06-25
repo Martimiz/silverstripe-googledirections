@@ -12,20 +12,27 @@
 	width: 100%;
 }
 
+#MapHolder #RouteForm form {
+	max-width: 100%;
+	width: 100%;
+}
+
 #MapHolder .field {
 	float: left;
 }
 
 #MapHolder form .field input.text {
-	height: 30px;
+	height: 24px;
+	padding: 2px 5px;
 }
 
 #MapHolder form .Actions input.action {
-	margin-left: 32px;
+	margin-left: 4px;
 	height: 30px;
 }
-
-#mapCanvas {}
+#MapHolder form .Actions #SubmitOrigin {
+	margin-left: 24px;
+}	
 
 /* Note: fixes problem with zoomtool object size 
  *       probable reason: img max-width defined elsewhere 
