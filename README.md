@@ -1,5 +1,9 @@
 # Google map and directions module for SilverStripe CMS #
 
+**Note**: this is the old stable version. Checkout `Master` for the new version 
+that allows for creating maps and links easily from within the CMS, as well as 
+defining a default to displaymap on page startup
+
 ## Introduction ##
 
 This module lets you create links that generate a Google Map based on 
