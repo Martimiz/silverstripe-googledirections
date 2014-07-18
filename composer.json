@@ -19,5 +19,8 @@
 	"support": 
 	{
 		"issues": "https://github.com/Martimiz/silverstripe-googledirections/issues"
-	}	
+	},
+	"extra": {
+                "installer-name": "googledirections"
+        }	
 }
